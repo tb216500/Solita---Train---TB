@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DB_Prod_Stage"
+  DTS:DTSID="{E999C397-9622-438D-B31E-6FCDB4489739}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=LAPTOP-5UMNN5BO;Initial Catalog=Prod_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Project1-{E999C397-9622-438D-B31E-6FCDB4489739}LAPTOP-5UMNN5BO.Prod_Stage;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
