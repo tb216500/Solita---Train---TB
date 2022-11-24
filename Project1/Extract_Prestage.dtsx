@@ -11,8 +11,8 @@
   DTS:LocaleID="1053"
   DTS:ObjectName="Extract_Prestage"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{ECC27BB6-FE6C-447C-9163-5461B1177A7C}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{B8D4C884-2153-4202-AE93-62FE20640934}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4225,6 +4225,199 @@
                   </outputs>
                 </component>
                 <component
+                  refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Prestage - Trips"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Trips]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">true</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Connections[OleDbConnection]"
+                      connectionManagerID="{7A269EC4-5A76-4FC2-8325-34558F930D5C}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[DB_Dev_Prestage]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].Columns[route_id]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="route_id"
+                          externalMetadataColumnId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[route_id]"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[route_id]" />
+                        <inputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].Columns[service_id]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="service_id"
+                          externalMetadataColumnId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[service_id]"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[service_id]" />
+                        <inputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].Columns[trip_id]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="trip_id"
+                          externalMetadataColumnId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[trip_id]"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[trip_id]" />
+                        <inputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].Columns[trip_headsign]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="trip_headsign"
+                          externalMetadataColumnId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[trip_headsign]"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[trip_headsign]" />
+                        <inputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].Columns[block_id]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="block_id"
+                          externalMetadataColumnId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[block_id]"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[block_id]" />
+                        <inputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].Columns[trip_short_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="trip_short_name"
+                          externalMetadataColumnId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[trip_short_name]"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[trip_short_name]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[route_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="route_id" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[service_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="service_id" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[trip_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="trip_id" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[trip_headsign]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="trip_headsign" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[block_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="block_id" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[trip_short_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="trip_short_name" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input].ExternalColumns[shape_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="4000"
+                          name="shape_id" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Agency"
                   componentClassID="Microsoft.FlatFileSource"
                   contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -5790,6 +5983,245 @@
                     </output>
                   </outputs>
                 </component>
+                <component
+                  refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1053"
+                  name="TXT - Trips"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Trips]"
+                      connectionManagerRefId="Package.ConnectionManagers[Trips]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[route_id]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[route_id]"
+                          length="50"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[route_id]"
+                          name="route_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[service_id]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[service_id]"
+                          length="50"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[service_id]"
+                          name="service_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[trip_id]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[trip_id]"
+                          length="50"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[trip_id]"
+                          name="trip_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[trip_headsign]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[trip_headsign]"
+                          length="50"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[trip_headsign]"
+                          name="trip_headsign"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[block_id]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[block_id]"
+                          length="50"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[block_id]"
+                          name="block_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[trip_short_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[trip_short_name]"
+                          length="50"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].Columns[trip_short_name]"
+                          name="trip_short_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[route_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="route_id" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[service_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="service_id" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[trip_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="trip_id" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[trip_headsign]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="trip_headsign" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[block_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="block_id" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[trip_short_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="trip_short_name" />
+                        <externalMetadataColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output].ExternalColumns[shape_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="shape_id" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
               </components>
               <paths>
                 <path
@@ -5827,6 +6259,11 @@
                   endId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Agency.Inputs[OLE DB Destination Input]"
                   name="Flat File Source Output"
                   startId="Package\SC - Prestage\Load_Prestage - Train\TXT - Agency.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\SC - Prestage\Load_Prestage - Train.Paths[Flat File Source Output7]"
+                  endId="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips.Outputs[Flat File Source Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -5875,25 +6312,25 @@
         <NodeLayout
           Size="206.666666666667,42.6666666666667"
           Id="Package\SC - Prestage\Truncate - Prestage - Train"
-          TopLeft="31.0833316383262,28.0701784264238" />
+          TopLeft="22.9583317593981,34.9122838183673" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\SC - Prestage\Load_Prestage - Train"
-          TopLeft="41.7083314800016,106.754390433775" />
+          TopLeft="33.5833316010736,112.912285286524" />
         <EdgeLayout
           Id="Package\SC - Prestage.PrecedenceConstraints[Constraint]"
-          TopLeft="134.395831559164,70.7368450930905">
+          TopLeft="126.270831680236,77.578950485034">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.0175453406841"
+              EndConnector="0,35.3333348014897"
               Start="0,0"
-              End="0,28.5175453406841">
+              End="0,27.8333348014897">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.5175453406841" />
+                    End="0,27.8333348014897" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5905,8 +6342,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="245.333333333334,222"
-          Size="245.333333333334,265.333333333334"
+          PanelSize="245.333333333334,210"
+          Size="245.333333333334,253.333333333334"
           Id="Package\SC - Prestage"
           TopLeft="82.4999987706543,88.2631595560719" />
       </GraphLayout>
@@ -6187,6 +6624,48 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips"
+          TopLeft="73.1249989103526,486.877199499011" />
+        <NodeLayout
+          Size="133.333333333334,42.6666666666667"
+          Id="Package\SC - Prestage\Load_Prestage - Train\TXT - Trips"
+          TopLeft="68.1249989848584,404.070180383966" />
+        <EdgeLayout
+          Id="Package\SC - Prestage\Load_Prestage - Train.Paths[Flat File Source Output7]"
+          TopLeft="134.791665651525,446.736847050633">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.3333332588275,40.1403524483782"
+              Start="0,0"
+              End="16.3333332588275,32.6403524483782">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.0701762241891" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.0701762241891"
+                    Point2="0,20.0701762241891"
+                    Point3="4,20.0701762241891" />
+                  <mssgle:LineSegment
+                    End="12.3333332588275,20.0701762241891" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.3333332588275,20.0701762241891"
+                    Point2="16.3333332588275,20.0701762241891"
+                    Point3="16.3333332588275,24.0701762241891" />
+                  <mssgle:LineSegment
+                    End="16.3333332588275,32.6403524483782" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -6270,6 +6749,19 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\SC - Prestage\Load_Prestage - Train\Prestage - Agency">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SC - Prestage\Load_Prestage - Train\Prestage - Trips">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
