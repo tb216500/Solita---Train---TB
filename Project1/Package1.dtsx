@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="11/15/2022 10:01:25 PM"
@@ -11,9 +11,2369 @@
   DTS:LocaleID="1053"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionGUID="{3D9BF368-4722-4EE1-AE6C-7DD6A0607713}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{C4A3DCD7-BCEC-4FA6-A59E-08785C48B86F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{585CC11F-1AC6-4214-B994-16E57C5741CC}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\tb216\OneDrive\Desktop\train-45-data-2017-01-01_to_2017-07-12.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D6374F56-71E7-44B9-A050-E73910BF612B}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1053"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\tb216\OneDrive\Desktop\train-45-data-2017-01-01_to_2017-07-12.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cancelled"
+              DTS:DTSID="{E85B8739-2C64-40F0-886E-C0D5D2DEFEC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="commuterLineID"
+              DTS:DTSID="{58AFAD38-441F-48D9-B289-C6645AFE4889}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="departureDate"
+              DTS:DTSID="{DFFF56FC-C7DC-492B-9CF0-69E9C823EE3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="operatorShortCode"
+              DTS:DTSID="{6E320568-F4B5-4245-94B3-0AF46C913F47}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="operatorUICCode"
+              DTS:DTSID="{CF19264A-ADDE-4582-8018-B27F8F721F83}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="runningCurrently"
+              DTS:DTSID="{59F0A858-82FC-43D1-9D37-8DA09A522142}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowActualTime"
+              DTS:DTSID="{482030F8-6482-4AD5-AD9A-A208DA929FD0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCancelled"
+              DTS:DTSID="{D7D7B027-A90D-4E4F-8190-9BE06219CE17}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCausesCategoryCode"
+              DTS:DTSID="{34A74062-AD3A-4C31-9405-C747906D6A11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCausesCategoryCodeId"
+              DTS:DTSID="{0D89AA02-1633-4B0E-8D8D-E83DC82ABE4C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCausesDetailedCategoryCode"
+              DTS:DTSID="{87EF070F-B8F4-4EDA-B4FE-9802E021FCF2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCausesDetailedCategoryCodeId"
+              DTS:DTSID="{B93E0C44-222B-47CA-B902-9B9EC2060326}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCausesThirdCategoryCode"
+              DTS:DTSID="{C74919CB-1DAD-41BA-A316-C419956F42E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCausesThirdCategoryCodeId"
+              DTS:DTSID="{774AB5D1-E04F-4288-8FEE-F641B7BE36BD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCommercialStop"
+              DTS:DTSID="{F69C6AF1-26A2-446B-9643-11C1D158C0FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCommercialTrack"
+              DTS:DTSID="{871F7AC0-3651-4FB2-89A5-5F564F454E7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCountryCode"
+              DTS:DTSID="{FBD6F7A5-21CC-4E19-BCB1-60A731B4ED0E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowDifferenceInMinutes"
+              DTS:DTSID="{65705D58-9E4A-46A5-BDBE-0178D43EA123}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowEstimateSource"
+              DTS:DTSID="{CA767DD8-A31B-4684-8662-DA3400C779D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowLiveEstimateTime"
+              DTS:DTSID="{21CC67DB-0BDE-4524-80D2-BC27FE2497FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowScheduledTime"
+              DTS:DTSID="{BA0BC688-ADFA-44D0-9B4B-9C8161304CF0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowStationShortCode"
+              DTS:DTSID="{8AA68C9A-50AD-486B-8A51-0720C26E51D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowStationUICCode"
+              DTS:DTSID="{0193D7F4-0CCF-498C-8380-868C0C208519}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowTrainReadyAccepted"
+              DTS:DTSID="{25E0E3F6-63FD-47C8-8B7F-88DAC9987401}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowTrainReadySource"
+              DTS:DTSID="{A5F22BEE-2F60-49F7-8A05-53A8C8473E9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowTrainReadyTimestamp"
+              DTS:DTSID="{CC47ECC3-87AD-4169-A7F4-790C23E3AECB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowTrainStopping"
+              DTS:DTSID="{ECB45ADD-5099-4A01-AB24-04E144C5EB43}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowType"
+              DTS:DTSID="{5A2C7452-B577-4CF9-94AC-F6F89971F54A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timetableAcceptanceDate"
+              DTS:DTSID="{11BC299E-FEF2-4C0C-8DE5-23E5EB699BDF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timetableType"
+              DTS:DTSID="{3DC93A36-D096-4975-BB6F-4DDEBB32E9F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="trainCategory"
+              DTS:DTSID="{C25F2BEC-BD25-4C30-816A-CC6CD2C05184}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="trainNumber"
+              DTS:DTSID="{5A91F0CE-236D-47F8-8C97-F4F81DDC4850}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="trainType"
+              DTS:DTSID="{BFECDB90-269C-4089-B7CA-F9539303E070}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="version"
+              DTS:DTSID="{9D5992C9-66A3-4E95-819A-1605EC7369C5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Train CSV Import]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{773B221E-3F3C-4391-B5B3-EC8C040E344E}"
+      DTS:ObjectName="Train CSV Import">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1053"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\tb216\OneDrive\Desktop\train-45-data-2017-01-01_to_2017-07-12.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cancelled"
+              DTS:DTSID="{AC61A827-B676-4EE0-884C-53424D1B099D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="commuterLineID"
+              DTS:DTSID="{CDDB4A14-8A10-4C33-BE2C-57FBD9D00DB3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="departureDate"
+              DTS:DTSID="{5D0C539D-5047-4AA4-9A29-1776403EF423}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="operatorShortCode"
+              DTS:DTSID="{E6986546-5C79-4375-9260-A4B027A49E07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="operatorUICCode"
+              DTS:DTSID="{0D014ECB-424F-479B-9971-C8FBB57EB51A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="runningCurrently"
+              DTS:DTSID="{5A0C9F56-82AC-42DB-9242-BECDAEE94388}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowActualTime"
+              DTS:DTSID="{F6B6EA01-2A60-4DEF-9BD6-FCBEC79EA323}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCancelled"
+              DTS:DTSID="{8DDFCAFE-03CC-4D52-8BD7-423F7442F374}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCausesCategoryCode"
+              DTS:DTSID="{DB6A0D4A-4CA7-4343-AA70-BF63B3D93121}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCausesCategoryCodeId"
+              DTS:DTSID="{4E527E60-A926-4DC8-8973-69D2570CC564}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCausesDetailedCategoryCode"
+              DTS:DTSID="{4E804A82-8BE0-4EF7-8273-2744EF8937FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCausesDetailedCategoryCodeId"
+              DTS:DTSID="{0AB9981B-2EEC-4BC1-9CB3-455B5C7D65FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCausesThirdCategoryCode"
+              DTS:DTSID="{E49AD747-09EA-4DBD-B55D-42187BE3904E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCausesThirdCategoryCodeId"
+              DTS:DTSID="{6CFEA69A-D9CD-4BB9-9F90-CC9169F5F96C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCommercialStop"
+              DTS:DTSID="{80BD0AB9-63FF-47C6-9092-6CFB25E20F74}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCommercialTrack"
+              DTS:DTSID="{EA6E49AD-E512-43FC-A5B0-3C3E18F78D59}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowCountryCode"
+              DTS:DTSID="{A6E1C379-8285-444D-92FB-2B6B43776F6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowDifferenceInMinutes"
+              DTS:DTSID="{27FF18D9-2BF5-46C3-A312-3C3B1D10D001}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowEstimateSource"
+              DTS:DTSID="{7DF0CAD9-FEB0-4F75-9614-5C93BDC212C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowLiveEstimateTime"
+              DTS:DTSID="{6FD7BBE7-823E-4205-9FA6-F1864C5DE767}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowScheduledTime"
+              DTS:DTSID="{FF467FEB-B647-4941-A41B-E1A1F98D036F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowStationShortCode"
+              DTS:DTSID="{5324EE1B-1E21-4159-B236-C83B458715BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowStationUICCode"
+              DTS:DTSID="{04250CBF-8A64-4B98-ADDD-10DE39071AE8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowTrainReadyAccepted"
+              DTS:DTSID="{413660F9-2BF3-4680-A35B-B0301B1C59A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowTrainReadySource"
+              DTS:DTSID="{633F1BEE-2387-47EB-8A5F-135FD6D966DB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowTrainReadyTimestamp"
+              DTS:DTSID="{12F59120-6CE2-41D7-87A0-A3D6E237DD25}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowTrainStopping"
+              DTS:DTSID="{A8551DE0-DE9D-46CB-B581-CE54C3D39F46}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timeTableRowType"
+              DTS:DTSID="{0F1BE2D4-9254-4069-8D14-5D99A415B558}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timetableAcceptanceDate"
+              DTS:DTSID="{9BA7C9FD-0C46-4D80-B43C-C6FA9477676C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timetableType"
+              DTS:DTSID="{EC1A2447-8EDF-4800-B45A-F3F691A3CB2B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="trainCategory"
+              DTS:DTSID="{94E41252-61A7-4B8D-944A-333565FD7064}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="trainNumber"
+              DTS:DTSID="{83B48F96-E794-43B2-A514-09CE4EAEB274}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="trainType"
+              DTS:DTSID="{1184D0D1-50C9-40C7-8E0E-8E5A404E5865}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="version"
+              DTS:DTSID="{55A02AA8-8191-4E63-A121-4D631BA95132}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Prestage - Train"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9316B156-E309-4E38-99DF-A2470D5B41DA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Prestage - Train"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Prestage - Train\Prestage - Train CSV"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Prestage - Train CSV"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Prestage - Train]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Prestage - Train\Prestage - Train CSV.Connections[OleDbConnection]"
+                  connectionManagerID="{7A269EC4-5A76-4FC2-8325-34558F930D5C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DB_Dev_Prestage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[cancelled]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cancelled"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[cancelled]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[cancelled]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[commuterLineID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="commuterLineID"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[commuterLineID]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[commuterLineID]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[departureDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="departureDate"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[departureDate]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[departureDate]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[operatorShortCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="operatorShortCode"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[operatorShortCode]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[operatorShortCode]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[operatorUICCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="operatorUICCode"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[operatorUICCode]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[operatorUICCode]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[runningCurrently]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="runningCurrently"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[runningCurrently]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[runningCurrently]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowActualTime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowActualTime"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowActualTime]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowActualTime]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowCancelled]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowCancelled"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCancelled]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCancelled]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesCategoryCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowCausesCategoryCode"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesCategoryCode]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCode]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesCategoryCodeId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowCausesCategoryCodeId"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesCategoryCodeId]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCodeId]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesDetailedCategoryCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowCausesDetailedCategoryCode"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesDetailedCategoryCode]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCode]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesDetailedCategoryCodeId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowCausesDetailedCategoryCodeId"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesDetailedCategoryCodeId]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCodeId]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesThirdCategoryCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowCausesThirdCategoryCode"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesThirdCategoryCode]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCode]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesThirdCategoryCodeId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowCausesThirdCategoryCodeId"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesThirdCategoryCodeId]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCodeId]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowCommercialStop]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowCommercialStop"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCommercialStop]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCommercialStop]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowCommercialTrack]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowCommercialTrack"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCommercialTrack]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCommercialTrack]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowCountryCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowCountryCode"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCountryCode]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCountryCode]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowDifferenceInMinutes]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowDifferenceInMinutes"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowDifferenceInMinutes]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowDifferenceInMinutes]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowEstimateSource]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowEstimateSource"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowEstimateSource]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowEstimateSource]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowLiveEstimateTime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowLiveEstimateTime"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowLiveEstimateTime]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowLiveEstimateTime]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowScheduledTime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowScheduledTime"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowScheduledTime]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowScheduledTime]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowStationShortCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowStationShortCode"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowStationShortCode]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowStationShortCode]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowStationUICCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowStationUICCode"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowStationUICCode]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowStationUICCode]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowTrainReadyAccepted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowTrainReadyAccepted"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadyAccepted]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyAccepted]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowTrainReadySource]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowTrainReadySource"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadySource]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadySource]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowTrainReadyTimestamp]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowTrainReadyTimestamp"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadyTimestamp]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyTimestamp]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowTrainStopping]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowTrainStopping"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainStopping]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowTrainStopping]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timeTableRowType]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timeTableRowType"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowType]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowType]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timetableAcceptanceDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timetableAcceptanceDate"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timetableAcceptanceDate]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timetableAcceptanceDate]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[timetableType]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="timetableType"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timetableType]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timetableType]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[trainCategory]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="trainCategory"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[trainCategory]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[trainCategory]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[trainNumber]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="trainNumber"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[trainNumber]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[trainNumber]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[trainType]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="trainType"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[trainType]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[trainType]" />
+                    <inputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].Columns[version]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="version"
+                      externalMetadataColumnId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[version]"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[version]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[cancelled]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cancelled" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[commuterLineID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="commuterLineID" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[departureDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="departureDate" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[operatorShortCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="operatorShortCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[operatorUICCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="operatorUICCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[runningCurrently]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="runningCurrently" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowActualTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowActualTime" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCancelled]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCancelled" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesCategoryCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesCategoryCodeId" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesDetailedCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesDetailedCategoryCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesDetailedCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesDetailedCategoryCodeId" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesThirdCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesThirdCategoryCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesThirdCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesThirdCategoryCodeId" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCommercialStop]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCommercialStop" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCommercialTrack]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCommercialTrack" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCountryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCountryCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowDifferenceInMinutes]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowDifferenceInMinutes" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowEstimateSource]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowEstimateSource" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowLiveEstimateTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowLiveEstimateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowScheduledTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowScheduledTime" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowStationShortCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowStationShortCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowStationUICCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowStationUICCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadyAccepted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowTrainReadyAccepted" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadySource]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowTrainReadySource" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadyTimestamp]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowTrainReadyTimestamp" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainStopping]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowTrainStopping" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowType" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timetableAcceptanceDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timetableAcceptanceDate" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[timetableType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timetableType" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[trainCategory]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="trainCategory" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[trainNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="trainNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[trainType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="trainType" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input].ExternalColumns[version]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="version" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Prestage - Train\Prestage - Train CSV.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Prestage - Train\Prestage - Train CSV.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Prestage - Train\Prestage - Train CSV.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Prestage - Train\Prestage - Train CSV.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Prestage - Train\Source - Train CSV"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1053"
+              name="Source - Train CSV"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Prestage - Train\Source - Train CSV.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Train CSV Import]"
+                  connectionManagerRefId="Package.ConnectionManagers[Train CSV Import]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[cancelled]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[cancelled]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[cancelled]"
+                      name="cancelled"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[commuterLineID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[commuterLineID]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[commuterLineID]"
+                      name="commuterLineID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[departureDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[departureDate]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[departureDate]"
+                      name="departureDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[operatorShortCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[operatorShortCode]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[operatorShortCode]"
+                      name="operatorShortCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[operatorUICCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[operatorUICCode]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[operatorUICCode]"
+                      name="operatorUICCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[runningCurrently]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[runningCurrently]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[runningCurrently]"
+                      name="runningCurrently"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowActualTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowActualTime]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowActualTime]"
+                      name="timeTableRowActualTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCancelled]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCancelled]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCancelled]"
+                      name="timeTableRowCancelled"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesCategoryCode]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCode]"
+                      name="timeTableRowCausesCategoryCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesCategoryCodeId]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCodeId]"
+                      name="timeTableRowCausesCategoryCodeId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesDetailedCategoryCode]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCode]"
+                      name="timeTableRowCausesDetailedCategoryCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesDetailedCategoryCodeId]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCodeId]"
+                      name="timeTableRowCausesDetailedCategoryCodeId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesThirdCategoryCode]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCode]"
+                      name="timeTableRowCausesThirdCategoryCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesThirdCategoryCodeId]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCodeId]"
+                      name="timeTableRowCausesThirdCategoryCodeId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCommercialStop]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCommercialStop]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCommercialStop]"
+                      name="timeTableRowCommercialStop"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCommercialTrack]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCommercialTrack]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCommercialTrack]"
+                      name="timeTableRowCommercialTrack"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCountryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCountryCode]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowCountryCode]"
+                      name="timeTableRowCountryCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowDifferenceInMinutes]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowDifferenceInMinutes]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowDifferenceInMinutes]"
+                      name="timeTableRowDifferenceInMinutes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowEstimateSource]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowEstimateSource]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowEstimateSource]"
+                      name="timeTableRowEstimateSource"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowLiveEstimateTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowLiveEstimateTime]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowLiveEstimateTime]"
+                      name="timeTableRowLiveEstimateTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowScheduledTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowScheduledTime]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowScheduledTime]"
+                      name="timeTableRowScheduledTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowStationShortCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowStationShortCode]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowStationShortCode]"
+                      name="timeTableRowStationShortCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowStationUICCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowStationUICCode]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowStationUICCode]"
+                      name="timeTableRowStationUICCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyAccepted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadyAccepted]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyAccepted]"
+                      name="timeTableRowTrainReadyAccepted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadySource]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadySource]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadySource]"
+                      name="timeTableRowTrainReadySource"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyTimestamp]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadyTimestamp]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyTimestamp]"
+                      name="timeTableRowTrainReadyTimestamp"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowTrainStopping]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainStopping]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowTrainStopping]"
+                      name="timeTableRowTrainStopping"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowType]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowType]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timeTableRowType]"
+                      name="timeTableRowType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timetableAcceptanceDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timetableAcceptanceDate]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timetableAcceptanceDate]"
+                      name="timetableAcceptanceDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timetableType]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timetableType]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[timetableType]"
+                      name="timetableType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[trainCategory]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[trainCategory]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[trainCategory]"
+                      name="trainCategory"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[trainNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[trainNumber]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[trainNumber]"
+                      name="trainNumber"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[trainType]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[trainType]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[trainType]"
+                      name="trainType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[version]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[version]"
+                      length="50"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].Columns[version]"
+                      name="version"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[cancelled]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cancelled" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[commuterLineID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="commuterLineID" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[departureDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="departureDate" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[operatorShortCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="operatorShortCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[operatorUICCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="operatorUICCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[runningCurrently]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="runningCurrently" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowActualTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowActualTime" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCancelled]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCancelled" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesCategoryCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesCategoryCodeId" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesDetailedCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesDetailedCategoryCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesDetailedCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesDetailedCategoryCodeId" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesThirdCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesThirdCategoryCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesThirdCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesThirdCategoryCodeId" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCommercialStop]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCommercialStop" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCommercialTrack]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCommercialTrack" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCountryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCountryCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowDifferenceInMinutes]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowDifferenceInMinutes" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowEstimateSource]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowEstimateSource" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowLiveEstimateTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowLiveEstimateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowScheduledTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowScheduledTime" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowStationShortCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowStationShortCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowStationUICCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowStationUICCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadyAccepted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowTrainReadyAccepted" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadySource]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowTrainReadySource" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadyTimestamp]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowTrainReadyTimestamp" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainStopping]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowTrainStopping" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timeTableRowType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowType" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timetableAcceptanceDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timetableAcceptanceDate" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[timetableType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timetableType" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[trainCategory]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="trainCategory" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[trainNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="trainNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[trainType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="trainType" />
+                    <externalMetadataColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output].ExternalColumns[version]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="version" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Prestage - Train.Paths[Flat File Source Output]"
+              endId="Package\Prestage - Train\Prestage - Train CSV.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Prestage - Train\Source - Train CSV.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\Prestage - Train"
+          TopLeft="119.374998221174,96.4736860264042" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Prestage - Train">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="181.333333333334,42.6666666666667"
+          Id="Package\Prestage - Train\Prestage - Train CSV"
+          TopLeft="340.624994924292,129.315791907733" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Prestage - Train\Source - Train CSV"
+          TopLeft="341.874994905665,24.6315794109968" />
+        <EdgeLayout
+          Id="Package\Prestage - Train.Paths[Flat File Source Output]"
+          TopLeft="429.583328248312,67.2982460776634">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.0175458300698"
+              Start="0,0"
+              End="0,54.5175458300698">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.5175458300698" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Prestage - Train\Prestage - Train CSV">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
